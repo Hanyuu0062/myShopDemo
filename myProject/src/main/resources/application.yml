@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: my_application
+
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/db01
+      username: root
+      password: 1234
+
+  redis:
+    port:6379
+    host:localhost
+
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
